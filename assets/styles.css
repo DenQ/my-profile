@@ -1,0 +1,73 @@
+html {
+    height: 100%;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.container {
+    display: flex;
+    border: 1px solid gray;
+    height: 100vh;
+}
+
+.container__photo {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+
+    background-color: darksalmon;
+}
+
+.container__photo > .photo__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*-o-transition: opacity 4s ease;*/
+    /*-webkit-transition: opacity 1s ease;*/
+    background: url("img.png");
+    /*background: url("http://www.templatefoundation.com/previews/miller/assets/img/background.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container__content {
+    border: 1px solid gray;
+    background-color: cornflowerblue;
+
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__section {
+    min-width: 100%;
+    min-height: 100vh;
+    border: 1px solid gray;
+}
+
+@media (max-width: 1200px) {
+    .container{
+        flex-direction: column;
+        height: unset;
+    }
+    .container__photo {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    .container__content{
+        min-width: 100vw;
+    }
+}
