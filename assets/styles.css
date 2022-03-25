@@ -1,20 +1,29 @@
 html {
     height: 100%;
 
-    font-family: "Abril Fatface", cursive;
-    font-weight: normal;
+    font-family: 'Arapey', serif;
+    font-weight: 300;
     letter-spacing: .05em;
     color: black;
-
     scroll-behavior: smooth;
 }
 html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 h1 {
-    font-size: 3rem;
+    font-family: "Abril Fatface", serif;
+    font-size: 2.5rem;
+    font-weight: 100;
+    letter-spacing: 0.03em;
+}
+h2 {
+    font-family: "Abril Fatface", serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
 }
 p {
     font-size: 1.2rem;
@@ -96,6 +105,10 @@ a {
     width: 50vh
 }
 
+#s2, #s3 {
+    height: 70vh;
+}
+
 @media (max-width: 1200px) {
     .section .section__wrap {
         width: 70vh
@@ -127,7 +140,7 @@ a {
     }
 }
 
-/* Button "Learn More" */
+/* Start. Button "Learn More" */
 .hvr-sweep-to-right {
     margin-top: 10%;
     background-color: black;
@@ -180,3 +193,4 @@ a {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+/* End. Button "Learn More" */
