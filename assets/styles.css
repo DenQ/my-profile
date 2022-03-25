@@ -18,7 +18,7 @@ html, body {
     width: 50vw;
     height: 100vh;
 
-    background-color: darksalmon;
+    /*background-color: darksalmon;*/
 }
 
 .container__photo > .photo__wrap {
@@ -36,8 +36,8 @@ html, body {
 }
 
 .container__content {
-    border: 1px solid gray;
-    background-color: cornflowerblue;
+    /*border: 1px solid gray;*/
+    /*background-color: cornflowerblue;*/
 
     width: 50%;
     height: 100%;
@@ -45,6 +45,7 @@ html, body {
     position: relative;
     overflow: hidden;
     overflow-y: scroll;
+    /*overflow-x: auto;*/
 }
 
 .content {
@@ -71,3 +72,12 @@ html, body {
         min-width: 100vw;
     }
 }
+
+.section .section__wrap {
+    background-color: darksalmon;
+    margin: 10%;
+    padding: 10%;
+}
+
+
+
