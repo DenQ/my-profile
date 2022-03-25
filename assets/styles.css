@@ -29,8 +29,8 @@ html, body {
     height: 100vh;
     /*-o-transition: opacity 4s ease;*/
     /*-webkit-transition: opacity 1s ease;*/
-    background: url("img.png");
-    /*background: url("http://www.templatefoundation.com/previews/miller/assets/img/background.jpg");*/
+    /*background: url("img.png");*/
+    background: url("http://www.templatefoundation.com/previews/miller/assets/img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -77,8 +77,25 @@ html, body {
     background-color: darksalmon;
     margin: 10%;
     padding: 10%;
+    width: 40vh
 }
 
+@media (max-width: 1200px) {
+    .section .section__wrap {
+        width: 70vh
+    }
+}
+@media (max-width: 1000px) {
+    .section .section__wrap {
+        width: 50vh
+    }
+}
+
+@media (max-width: 700px) {
+    .section .section__wrap {
+        width: 40vh
+    }
+}
 
 .animated {
     animation-duration: 1s;

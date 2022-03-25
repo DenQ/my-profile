@@ -11,16 +11,16 @@ function onVisible(element, callback) {
 
 function addAnimationCssClass(selector) {
     onVisible(document.querySelector(selector), (node) => {
-        const targetNode = node.querySelector('.section__wrap');
-
-        if (targetNode) {
-            targetNode.classList.add('animated');
-        }
+        node.classList.add('animated');
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    ['#s1', '#s2', '#s3', '#s4', '#s5'].forEach((key) => {
-        addAnimationCssClass(key);
-    });
+    [
+        '#s1>.section__wrap',
+        '#s2>.section__wrap',
+        '#s3>.section__wrap',
+        '#s4>.section__wrap',
+        '#s5>.section__wrap'
+    ].forEach(addAnimationCssClass);
 })
