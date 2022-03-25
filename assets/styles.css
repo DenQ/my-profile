@@ -1,15 +1,29 @@
 html {
     height: 100%;
+
+    font-family: "Abril Fatface", cursive;
+    font-weight: normal;
+    letter-spacing: .05em;
+    color: black;
 }
 html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
 }
+h1 {
+    font-size: 3rem;
+}
+p {
+    font-size: 1.2rem;
+}
+a {
+    text-decoration: none;
+}
 
 .container {
     display: flex;
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
     height: 100vh;
 }
 
@@ -29,8 +43,8 @@ html, body {
     height: 100vh;
     /*-o-transition: opacity 4s ease;*/
     /*-webkit-transition: opacity 1s ease;*/
-    /*background: url("img.png");*/
-    background: url("http://www.templatefoundation.com/previews/miller/assets/img/background.jpg");
+    background: url("img.png");
+    /*background: url("http://www.templatefoundation.com/previews/miller/assets/img/background.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -56,7 +70,7 @@ html, body {
 .content__section {
     min-width: 100%;
     min-height: 100vh;
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
 }
 
 @media (max-width: 1200px) {
@@ -74,10 +88,10 @@ html, body {
 }
 
 .section .section__wrap {
-    background-color: darksalmon;
-    margin: 10%;
+    /*background-color: darksalmon;*/
+    margin: 15%;
     padding: 10%;
-    width: 40vh
+    width: 50vh
 }
 
 @media (max-width: 1200px) {
@@ -107,6 +121,60 @@ html, body {
         margin-left: 100%;
     }
     to {
-        margin-left: 10%;
+        margin-left: 15%;
     }
+}
+
+/* Button "Learn More" */
+.hvr-sweep-to-right {
+    margin-top: 10%;
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    line-height: 3em;
+    display: inline-block;
+    padding: 0 2.6em;
+    overflow: hidden;
+    font-size: 1.3rem;
+
+    /*display: inline-block;*/
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
