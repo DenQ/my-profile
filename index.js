@@ -15,12 +15,22 @@ function addAnimationCssClass(selector) {
     });
 }
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     [
         '#s1>.section__wrap',
         '#s2>.section__wrap',
         '#s3>.section__wrap',
         '#s4>.section__wrap',
-        '#s5>.section__wrap'
     ].forEach(addAnimationCssClass);
+
+    document.querySelector('#btn-move').addEventListener('click', function() {
+        setTimeout(() => {
+            document.querySelector('#s2').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }, 0)
+    })
+
 })

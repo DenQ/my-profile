@@ -5,6 +5,8 @@ html {
     font-weight: normal;
     letter-spacing: .05em;
     color: black;
+
+    scroll-behavior: smooth;
 }
 html, body {
     margin: 0;
