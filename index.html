@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My Profile</title>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CArapey&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="./assets/styles.css" rel="stylesheet" >
     <meta name="viewport" content="width=device-width">
 </head>
@@ -56,17 +56,22 @@
             <div class="content__section section" id="s4">
                 <div class="section__wrap">
                     <h2>Contact Me.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa error, est ex,
-                        fugiat inventore ipsa ipsam magni minus neque nihil numquam optio possimus reprehenderit
-                        sapiente unde ut veniam vero.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa error, est ex,
-                        fugiat inventore ipsa ipsam magni minus neque nihil numquam optio possimus reprehenderit
-                        sapiente unde ut veniam vero.</p>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i>+38(071)419-71-65</li>
+                        <li><i class="fa-solid fa-envelope"></i>denquick@gmail.com</li>
+                    </ul>
+                    <form class="send-email" action="">
+                        <input type="text" name="name" placeholder="Your Name" class="form-control">
+                        <input type="text" name="email" placeholder="Your Email" class="form-control">
+                        <textarea name="message" placeholder="Your Message" class="form-control"></textarea>
+                        <button id="btn-submit" class="hvr-sweep-to-right" type="submit">Send Mail</button>
+                    </form>
                 </div>
             </div>
             <!--    s4 end      -->
         </div>
     </div>
     <script type="application/javascript" src="index.js"></script>
+<!--    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>-->
 </body>
 </html>

@@ -26,10 +26,15 @@ h2 {
     letter-spacing: 0.05em;
 }
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.6em;
 }
 a {
     text-decoration: none;
+}
+textarea {
+    font-family: system-ui;
+    font-size: 1.1rem;
 }
 
 .container {
@@ -140,6 +145,20 @@ a {
     }
 }
 
+
+/* Start. Contact List */
+ul.contact-list {
+    list-style: none;
+    padding: unset;
+}
+ul.contact-list > li {
+    margin-bottom: 1em;
+}
+ul.contact-list > li > i {
+    margin-right: 1em;
+}
+/* End. Contact List */
+
 /* Start. Button "Learn More" */
 .hvr-sweep-to-right {
     margin-top: 10%;
@@ -194,3 +213,33 @@ a {
     transform: scaleX(1);
 }
 /* End. Button "Learn More" */
+
+
+form.send-email {
+    color: white;
+    font-size: 2rem;
+    margin-top: 1.3em;
+}
+form.send-email > .form-control{
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    width: 100%;
+
+    display: block;
+    color: white;
+    background: black;
+    border: none !important;
+    border-radius: 35px;
+    line-height: 3.2em;
+    padding-right: 1.6em;
+    padding-left: 1.6em;
+}
+form.send-email .form-control::placeholder{
+    color: white;
+}
+
+form.send-email button {
+    border: 1px solid white;
+    margin-top: 5%;
+    cursor: pointer;
+}

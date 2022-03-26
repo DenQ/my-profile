@@ -15,8 +15,6 @@ function addAnimationCssClass(selector) {
     });
 }
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     [
         '#s1>.section__wrap',
@@ -31,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
         }, 0)
+    });
+
+    document.querySelector('#btn-submit').addEventListener('click', function(event) {
+        event.preventDefault();
+        // show captcha
+        // send email
+        console.log('Fire send form');
     })
 
 })
