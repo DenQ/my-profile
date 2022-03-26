@@ -16,13 +16,11 @@ html, body {
 h1 {
     font-family: "Abril Fatface", serif;
     font-size: 2.5rem;
-    font-weight: 100;
     letter-spacing: 0.03em;
 }
 h2 {
     font-family: "Abril Fatface", serif;
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 2.1rem;
     letter-spacing: 0.05em;
 }
 p {
@@ -145,6 +143,28 @@ textarea {
     }
 }
 
+/* Start. Service List */
+ul.service-list {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.service-list li.service-list__item {
+    font-size: 2rem;
+    line-height: 2.5em;
+}
+ul.service-list li.service-list__item i {
+    font-size: 1.2rem;
+    line-height: 3em;
+    width: 3em;
+    height: 3em;
+    margin-right: 1.5em;
+    text-align: center;
+    color: #fff;
+    border-radius: 100px;
+    background: #111;
+}
+/* End. Service List */
 
 /* Start. Contact List */
 ul.contact-list {
