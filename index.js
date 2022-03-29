@@ -15,6 +15,12 @@ function addAnimationCssClass(selector) {
     });
 }
 
+function getAge(birthday) { // birthday is a date
+    const ageDifMs = Date.now() - birthday.getTime();
+    const ageDate = new Date(ageDifMs); // milliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     [
         '#s1>.section__wrap',
@@ -36,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // show captcha
         // send email
         console.log('Fire send form');
-    })
+    });
+
+    document.querySelector('#experience').innerHTML = String(getAge(new Date('2010-01-01')));
 
 })
