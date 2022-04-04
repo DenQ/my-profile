@@ -40,22 +40,42 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#btn-submit').addEventListener('click', function(event) {
         event.preventDefault();
         // show captcha
-        // send email
-        const form = document.getElementById('contact-form-form');
-        const formData = new FormData(form);
+        const formElement = document.getElementById('contact-form');
+        const spinnerElement = document.querySelector('.lds-facebook');
+        const sendForm = () => {
+            const formData = new FormData(formElement);
+            console.log(123, spinnerElement);
 
-        fetch('https://formspree.io/f/mlezwzkl', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
+            spinnerElement.style.display = 'inline';
+            formElement.classList.add('muted');
+            // return fetch('https://formspree.io/f/mlezwzkl', {
+            //     method: 'POST',
+            //     body: formData,
+            //     headers: {
+            //         'Accept': 'application/json'
+            //     }
+            // });
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log(1);
+                    resolve(1)
+                }, 3000);
+            });
+        };
+
+        sendForm()
             .then((r) => {
                 console.log('Success', r);
+                formElement.hidden = true;
+                formElement.classList.remove('muted');
+                spinnerElement.style.display = 'none';
+                // show alert about success sending email
             })
             .catch((e) => {
                 console.log(e);
+                formElement.classList.remove('muted');
+                spinnerElement.style.display = 'none';
+                // show alert about fail sending email
             });
     });
 
