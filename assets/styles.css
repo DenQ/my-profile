@@ -311,3 +311,21 @@ form.send-email.muted{
     }
 }
 /* Spinner. End  */
+
+/* Notify. Start */
+.notify-success-sending {
+    display: none;
+    margin-top: 5em;
+    background-color: #2098d1;
+    color: white;
+    padding: 20px;
+    border-radius: 3px;
+}
+.notify-success-sending h3 {
+    margin-top: auto;
+}
+.notify-success-sending h3 i {
+    margin-right: 5px;
+}
+/* Notify. End */
+

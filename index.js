@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // show captcha
         const formElement = document.getElementById('contact-form');
         const spinnerElement = document.querySelector('.lds-facebook');
+        const successBlock = document.querySelector('.notify-success-sending');
+
         const sendForm = () => {
             const formData = new FormData(formElement);
             console.log(123, spinnerElement);
@@ -69,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 formElement.hidden = true;
                 formElement.classList.remove('muted');
                 spinnerElement.style.display = 'none';
+                successBlock.style.display = 'inline-block'
                 // show alert about success sending email
             })
             .catch((e) => {
