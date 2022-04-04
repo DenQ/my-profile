@@ -6,6 +6,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="./assets/styles.css" rel="stylesheet" >
     <meta name="viewport" content="width=device-width">
+
+    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.1/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.1/widget.min.js" async defer></script>
 </head>
 <body>
     <div class="container">
@@ -68,7 +71,8 @@
                     <form class="send-email" id="contact-form">
                         <input type="text" name="email" placeholder="Your Email" class="form-control">
                         <textarea name="message" placeholder="Your Message" class="form-control"></textarea>
-                        <button id="btn-submit" class="hvr-sweep-to-right" type="submit">Send Mail</button>
+                        <div class="frc-captcha" data-sitekey="FCMNML0CSIKKVES0" data-callback="captchaHandler" data-start="none"></div>
+                        <button id="btn-submit" class="hvr-sweep-to-right disabled" type="submit">Send Mail</button>
                         <div class="lds-facebook">
                             <div></div>
                             <div></div>

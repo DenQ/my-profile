@@ -258,6 +258,9 @@ form.send-email button {
 form.send-email.muted{
     pointer-events: none;
 }
+form.send-email > button.disabled {
+    pointer-events: none;
+}
 /* Form Send-email. End */
 
 /* Spinner. Start  */

@@ -21,6 +21,11 @@ function getAge(birthday) { // birthday is a date
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
+function captchaHandler (solution) {
+    document.getElementById('btn-submit').classList.remove('disabled')
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     [
         '#s1>.section__wrap',
@@ -39,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#btn-submit').addEventListener('click', function(event) {
         event.preventDefault();
-        // show captcha
+
         const formElement = document.getElementById('contact-form');
         const spinnerElement = document.querySelector('.lds-facebook');
         const successBlock = document.querySelector('.notify-success-sending');
@@ -47,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sendForm = () => {
             const formData = new FormData(formElement);
-            console.log(123, spinnerElement);
 
             spinnerElement.style.display = 'inline';
             errorsBlock.style.display = 'none';
             formElement.classList.add('muted');
+
             return fetch('https://formspree.io/f/mlezwzkl', {
                 method: 'POST',
                 body: formData,
@@ -62,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // return new Promise((resolve, reject) => {
             //     setTimeout(() => {
             //         console.log(1);
-            //         // resolve(1)
-            //         reject(2)
-            //     }, 3000);
+            //         resolve(1)
+            //         // reject(2)
+            //     }, 2000);
             // });
         };
 
@@ -85,5 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('#experience').innerHTML = String(getAge(new Date('2010-01-01')));
-
 })
