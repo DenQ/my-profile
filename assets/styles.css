@@ -1,0 +1,265 @@
+html {
+    height: 100%;
+
+    font-family: 'Arapey', serif;
+    font-weight: 300;
+    letter-spacing: .05em;
+    color: black;
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.03em;
+}
+h2 {
+    font-family: "Abril Fatface", serif;
+    font-size: 2.1rem;
+    letter-spacing: 0.05em;
+}
+p {
+    font-size: 1.1rem;
+    line-height: 1.6em;
+}
+a {
+    text-decoration: none;
+}
+textarea {
+    font-family: system-ui;
+    font-size: 1.1rem;
+}
+
+.container {
+    display: flex;
+    /*border: 1px solid gray;*/
+    height: 100vh;
+}
+
+.container__photo {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+
+    /*background-color: darksalmon;*/
+}
+
+.container__photo > .photo__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*-o-transition: opacity 4s ease;*/
+    /*-webkit-transition: opacity 1s ease;*/
+    background: url("img.png");
+    /*background: url("http://www.templatefoundation.com/previews/miller/assets/img/background.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container__content {
+    /*border: 1px solid gray;*/
+    /*background-color: cornflowerblue;*/
+
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    /*overflow-x: auto;*/
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__section {
+    min-width: 100%;
+    min-height: 100vh;
+    /*border: 1px solid gray;*/
+}
+
+@media (max-width: 1200px) {
+    .container{
+        flex-direction: column;
+        height: unset;
+    }
+    .container__photo {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    .container__content{
+        min-width: 100vw;
+    }
+}
+
+.section .section__wrap {
+    /*background-color: darksalmon;*/
+    margin: 15%;
+    padding: 10%;
+    width: 50vh
+}
+
+#s2, #s3 {
+    height: 70vh;
+}
+
+@media (max-width: 1200px) {
+    .section .section__wrap {
+        width: 70vh
+    }
+}
+@media (max-width: 1000px) {
+    .section .section__wrap {
+        width: 50vh
+    }
+}
+
+@media (max-width: 700px) {
+    .section .section__wrap {
+        width: 40vh
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 15%;
+    }
+}
+
+/* Start. Service List */
+ul.service-list {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.service-list li.service-list__item {
+    font-size: 2rem;
+    line-height: 2.5em;
+}
+ul.service-list li.service-list__item i {
+    font-size: 1.2rem;
+    line-height: 3em;
+    width: 3em;
+    height: 3em;
+    margin-right: 1.5em;
+    text-align: center;
+    color: #fff;
+    border-radius: 100px;
+    background: #111;
+}
+/* End. Service List */
+
+/* Start. Contact List */
+ul.contact-list {
+    list-style: none;
+    padding: unset;
+}
+ul.contact-list > li {
+    margin-bottom: 1em;
+}
+ul.contact-list > li > i {
+    margin-right: 1em;
+}
+/* End. Contact List */
+
+/* Start. Button "Learn More" */
+.hvr-sweep-to-right {
+    margin-top: 10%;
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    line-height: 3em;
+    display: inline-block;
+    padding: 0 2.6em;
+    overflow: hidden;
+    font-size: 1.3rem;
+
+    /*display: inline-block;*/
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+/* End. Button "Learn More" */
+
+
+form.send-email {
+    color: white;
+    font-size: 2rem;
+    margin-top: 1.3em;
+}
+form.send-email > .form-control{
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    width: 100%;
+
+    display: block;
+    color: white;
+    background: black;
+    border: none !important;
+    border-radius: 35px;
+    line-height: 3.2em;
+    padding-right: 1.6em;
+    padding-left: 1.6em;
+}
+form.send-email .form-control::placeholder{
+    color: white;
+}
+
+form.send-email button {
+    border: 1px solid white;
+    margin-top: 5%;
+    cursor: pointer;
+}
