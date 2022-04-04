@@ -41,7 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         // show captcha
         // send email
-        console.log('Fire send form');
+        const form = document.getElementById('contact-form-form');
+        const formData = new FormData(form);
+
+        fetch('https://formspree.io/f/mlezwzkl', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+            .then((r) => {
+                console.log('Success', r);
+            })
+            .catch((e) => {
+                console.log(e);
+            });
     });
 
     document.querySelector('#experience').innerHTML = String(getAge(new Date('2010-01-01')));
