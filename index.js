@@ -43,26 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const formElement = document.getElementById('contact-form');
         const spinnerElement = document.querySelector('.lds-facebook');
         const successBlock = document.querySelector('.notify-success-sending');
+        const errorsBlock = document.querySelector('.form-errors');
 
         const sendForm = () => {
             const formData = new FormData(formElement);
             console.log(123, spinnerElement);
 
             spinnerElement.style.display = 'inline';
+            errorsBlock.style.display = 'none';
             formElement.classList.add('muted');
-            // return fetch('https://formspree.io/f/mlezwzkl', {
-            //     method: 'POST',
-            //     body: formData,
-            //     headers: {
-            //         'Accept': 'application/json'
-            //     }
-            // });
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    console.log(1);
-                    resolve(1)
-                }, 3000);
+            return fetch('https://formspree.io/f/mlezwzkl', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
+            // return new Promise((resolve, reject) => {
+            //     setTimeout(() => {
+            //         console.log(1);
+            //         // resolve(1)
+            //         reject(2)
+            //     }, 3000);
+            // });
         };
 
         sendForm()
@@ -72,13 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 formElement.classList.remove('muted');
                 spinnerElement.style.display = 'none';
                 successBlock.style.display = 'inline-block'
-                // show alert about success sending email
             })
             .catch((e) => {
                 console.log(e);
                 formElement.classList.remove('muted');
                 spinnerElement.style.display = 'none';
-                // show alert about fail sending email
+                errorsBlock.style.display = 'inline-block';
             });
     });
 

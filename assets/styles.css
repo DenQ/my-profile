@@ -37,7 +37,6 @@ textarea {
 
 .container {
     display: flex;
-    /*border: 1px solid gray;*/
     height: 100vh;
 }
 
@@ -45,8 +44,6 @@ textarea {
     position: relative;
     width: 50vw;
     height: 100vh;
-
-    /*background-color: darksalmon;*/
 }
 
 .container__photo > .photo__wrap {
@@ -64,16 +61,12 @@ textarea {
 }
 
 .container__content {
-    /*border: 1px solid gray;*/
-    /*background-color: cornflowerblue;*/
-
     width: 50%;
     height: 100%;
 
     position: relative;
     overflow: hidden;
     overflow-y: scroll;
-    /*overflow-x: auto;*/
 }
 
 .content {
@@ -84,7 +77,6 @@ textarea {
 .content__section {
     min-width: 100%;
     min-height: 100vh;
-    /*border: 1px solid gray;*/
 }
 
 @media (max-width: 1200px) {
@@ -102,7 +94,6 @@ textarea {
 }
 
 .section .section__wrap {
-    /*background-color: darksalmon;*/
     margin: 15%;
     padding: 10%;
     width: 50vh
@@ -329,3 +320,42 @@ form.send-email.muted{
 }
 /* Notify. End */
 
+/* Form Errors. Start */
+.form-errors {
+    display: none;
+    color: darkred;
+    font-size: 1rem;
+    vertical-align: center;
+    padding-left: 10px;
+
+    position: relative;
+    top: -2.5rem;
+    width: 200px;
+}
+.form-errors p {
+    position: absolute;
+}
+/* Form Errors. Block */
+
+/* Footer. Start */
+.footer{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+.footer .footer__circle {
+    font-size: 1.8em;
+    margin: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+}
+.footer .footer__circle:hover{
+    background-color: #2098d1;
+    cursor: pointer;
+}
+/* Footer. End */
