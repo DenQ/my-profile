@@ -361,4 +361,8 @@ form.send-email > button.disabled {
     background-color: #2098d1;
     cursor: pointer;
 }
+
+.footer .footer__circle a {
+    color: white;
+}
 /* Footer. End */
