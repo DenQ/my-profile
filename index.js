@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             // return new Promise((resolve, reject) => {
             //     setTimeout(() => {
-            //         console.log(1);
             //         resolve(1)
             //         // reject(2)
             //     }, 2000);
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sendForm()
             .then((r) => {
-                console.log('Success', r);
                 formElement.hidden = true;
                 formElement.classList.remove('muted');
                 spinnerElement.style.display = 'none';
