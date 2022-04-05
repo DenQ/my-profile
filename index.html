@@ -6,6 +6,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="./assets/styles.css" rel="stylesheet" >
     <meta name="viewport" content="width=device-width">
+
+    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.1/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.1/widget.min.js" async defer></script>
 </head>
 <body>
     <div class="container">
@@ -61,13 +64,42 @@
                         <li><i class="fa-solid fa-phone"></i>+38(071)419-71-65</li>
                         <li><i class="fa-solid fa-envelope"></i>denquick@gmail.com</li>
                     </ul>
-                    <form class="send-email" action="">
-                        <input type="text" name="name" placeholder="Your Name" class="form-control">
+                    <div class="notify-success-sending">
+                        <h3><i class="fa-solid fa-circle-info"></i>Your email is success send.</h3>
+                        <p>I will read as soon as possible. Thanks!</p>
+                    </div>
+                    <form class="send-email" id="contact-form">
                         <input type="text" name="email" placeholder="Your Email" class="form-control">
                         <textarea name="message" placeholder="Your Message" class="form-control"></textarea>
-                        <button id="btn-submit" class="hvr-sweep-to-right" type="submit">Send Mail</button>
+                        <div class="frc-captcha" data-sitekey="FCMNML0CSIKKVES0" data-callback="captchaHandler" data-start="none"></div>
+                        <button id="btn-submit" class="hvr-sweep-to-right disabled" type="submit">Send Mail</button>
+                        <div class="lds-facebook">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="form-errors">
+                            <p>
+                                Error form. Something went wrong.
+                            </p>
+                        </div>
                     </form>
                 </div>
+                    <div class="footer">
+                        <span class="footer__circle">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </span>
+                        <span class="footer__circle">
+                            <i class="fa-brands fa-github"></i>
+                        </span>
+                        <span class="footer__circle">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </span>
+                        <span class="footer__circle">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+                    </div>
             </div>
             <!--    s4 end      -->
         </div>

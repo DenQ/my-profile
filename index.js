@@ -21,6 +21,11 @@ function getAge(birthday) { // birthday is a date
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
+function captchaHandler (solution) {
+    document.getElementById('btn-submit').classList.remove('disabled')
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     [
         '#s1>.section__wrap',
@@ -39,11 +44,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#btn-submit').addEventListener('click', function(event) {
         event.preventDefault();
-        // show captcha
-        // send email
-        console.log('Fire send form');
+
+        const formElement = document.getElementById('contact-form');
+        const spinnerElement = document.querySelector('.lds-facebook');
+        const successBlock = document.querySelector('.notify-success-sending');
+        const errorsBlock = document.querySelector('.form-errors');
+
+        const sendForm = () => {
+            const formData = new FormData(formElement);
+
+            spinnerElement.style.display = 'inline';
+            errorsBlock.style.display = 'none';
+            formElement.classList.add('muted');
+
+            return fetch('https://formspree.io/f/mlezwzkl', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            // return new Promise((resolve, reject) => {
+            //     setTimeout(() => {
+            //         console.log(1);
+            //         resolve(1)
+            //         // reject(2)
+            //     }, 2000);
+            // });
+        };
+
+        sendForm()
+            .then((r) => {
+                console.log('Success', r);
+                formElement.hidden = true;
+                formElement.classList.remove('muted');
+                spinnerElement.style.display = 'none';
+                successBlock.style.display = 'inline-block'
+            })
+            .catch((e) => {
+                console.log(e);
+                formElement.classList.remove('muted');
+                spinnerElement.style.display = 'none';
+                errorsBlock.style.display = 'inline-block';
+            });
     });
 
     document.querySelector('#experience').innerHTML = String(getAge(new Date('2010-01-01')));
-
 })

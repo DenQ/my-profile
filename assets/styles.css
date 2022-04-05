@@ -37,7 +37,6 @@ textarea {
 
 .container {
     display: flex;
-    /*border: 1px solid gray;*/
     height: 100vh;
 }
 
@@ -45,8 +44,6 @@ textarea {
     position: relative;
     width: 50vw;
     height: 100vh;
-
-    /*background-color: darksalmon;*/
 }
 
 .container__photo > .photo__wrap {
@@ -64,16 +61,12 @@ textarea {
 }
 
 .container__content {
-    /*border: 1px solid gray;*/
-    /*background-color: cornflowerblue;*/
-
     width: 50%;
     height: 100%;
 
     position: relative;
     overflow: hidden;
     overflow-y: scroll;
-    /*overflow-x: auto;*/
 }
 
 .content {
@@ -84,7 +77,6 @@ textarea {
 .content__section {
     min-width: 100%;
     min-height: 100vh;
-    /*border: 1px solid gray;*/
 }
 
 @media (max-width: 1200px) {
@@ -102,7 +94,6 @@ textarea {
 }
 
 .section .section__wrap {
-    /*background-color: darksalmon;*/
     margin: 15%;
     padding: 10%;
     width: 50vh
@@ -235,6 +226,7 @@ ul.contact-list > li > i {
 /* End. Button "Learn More" */
 
 
+/* Form Send-email. Start */
 form.send-email {
     color: white;
     font-size: 2rem;
@@ -263,3 +255,110 @@ form.send-email button {
     margin-top: 5%;
     cursor: pointer;
 }
+form.send-email.muted{
+    pointer-events: none;
+}
+form.send-email > button.disabled {
+    pointer-events: none;
+}
+/* Form Send-email. End */
+
+/* Spinner. Start  */
+.lds-facebook {
+    display: none;
+    position: relative;
+    left: 4rem;
+    top: -0.5rem;
+}
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #000;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: -0.06s;
+}
+.lds-facebook div:nth-child(4) {
+    left: 80px;
+    animation-delay: unset;
+}
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%, 100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+/* Spinner. End  */
+
+/* Notify. Start */
+.notify-success-sending {
+    display: none;
+    margin-top: 5em;
+    background-color: #2098d1;
+    color: white;
+    padding: 20px;
+    border-radius: 3px;
+}
+.notify-success-sending h3 {
+    margin-top: auto;
+}
+.notify-success-sending h3 i {
+    margin-right: 5px;
+}
+/* Notify. End */
+
+/* Form Errors. Start */
+.form-errors {
+    display: none;
+    color: darkred;
+    font-size: 1rem;
+    vertical-align: center;
+    padding-left: 10px;
+
+    position: relative;
+    top: -2.5rem;
+    width: 200px;
+}
+.form-errors p {
+    position: absolute;
+}
+/* Form Errors. Block */
+
+/* Footer. Start */
+.footer{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+.footer .footer__circle {
+    font-size: 1.8em;
+    margin: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+}
+.footer .footer__circle:hover{
+    background-color: #2098d1;
+    cursor: pointer;
+}
+/* Footer. End */
