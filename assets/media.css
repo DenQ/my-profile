@@ -15,24 +15,18 @@
     }
 }
 
-/*@media (max-width: 750px) {*/
-/*    .section .section__wrap {*/
-/*        width: 60vw;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 400px) {*/
-/*    .section__wrap {*/
-/*        width: unset;*/
-/*    }*/
-/*    .section .section__wrap {*/
-/*        width: 40vw;*/
-/*        margin: 0;*/
-/*    }*/
-/*}*/
-
-@media (max-height: 800px) {
-    .content__section {
-        min-height: 1000px;
+@media (max-width: 300px) {
+    #s3 .section__wrap .service-list .service-list__item {
+        font-size: 1.5rem;
+        line-height: 2.5em;
+    }
+    #s3 .section__wrap .service-list .service-list__item i{
+        font-size: 1.5rem;
+        line-height: 2em;
+        width: 2em;
+        height: 2em;
+        margin-right: 1em;
     }
 }
+
+

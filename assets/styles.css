@@ -83,15 +83,15 @@ textarea {
 }
 
 .section .section__wrap {
-    /*border: 1px solid gray;*/
+    border: 1px solid gray;
     padding: 10%;
     width: 35vw;
     min-height: 70vh;
     /*height: 100%;*/
 }
 
-#s2, #s3 {
-    height: 70vh;
+#s3{
+    height: 50vh;
 }
 
 
