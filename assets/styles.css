@@ -76,18 +76,15 @@ textarea {
 }
 
 .content__section {
-    /*border: 1px solid gray;*/
     padding-top: 5vh;
     min-width: 50vw;
     min-height: 100vh;
 }
 
 .section .section__wrap {
-    border: 1px solid gray;
     padding: 10%;
     width: 35vw;
     min-height: 70vh;
-    /*height: 100%;*/
 }
 
 #s3{
