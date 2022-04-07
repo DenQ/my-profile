@@ -72,7 +72,6 @@ textarea {
 .content {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
 }
 
 .content__section {

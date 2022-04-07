@@ -41,4 +41,9 @@
     }
 }
 
+@media (min-height: 1000px) {
+    #s1,#s2,#s3 {
+        min-height: 30vh;
+    }
+}
 
