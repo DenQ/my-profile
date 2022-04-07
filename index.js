@@ -25,6 +25,12 @@ function captchaHandler (solution) {
     document.getElementById('btn-submit').classList.remove('disabled')
 }
 
+function rerenderNode(element) {
+    if (element ) {
+        const clone = element.cloneNode(true);
+        element.replaceWith(clone);
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     [
@@ -34,12 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
         '#s4>.section__wrap',
     ].forEach(addAnimationCssClass);
 
-    document.querySelector('#btn-move').addEventListener('click', function() {
+    document.getElementById('btn-move').addEventListener('click', function(event) {
+        event.preventDefault();
         setTimeout(() => {
             document.querySelector('#s2').scrollIntoView({
                 behavior: 'smooth'
             });
-        }, 0)
+        }, 0);
+
+        // Notice: This element(btn) always is fire after click. Because
+        setTimeout(() => {
+            const element = document.getElementById('btn-move');
+            rerenderNode(element);
+        }, 1000);
     });
 
     document.querySelector('#btn-submit').addEventListener('click', function(event) {
