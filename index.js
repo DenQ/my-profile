@@ -43,16 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('#btn-submit').addEventListener('click', function(event) {
+        const formElement = document.getElementById('contact-form');
+        const formData = new FormData(formElement);
+        const values = [formData.getAll('email')[0], formData.getAll('message')[0]];
+        const isValidForm = values.every(Boolean);
+
+        if (!isValidForm) return;
+
         event.preventDefault();
 
-        const formElement = document.getElementById('contact-form');
+        const buttonSubmit = document.getElementById('btn-submit');
         const spinnerElement = document.querySelector('.lds-facebook');
         const successBlock = document.querySelector('.notify-success-sending');
         const errorsBlock = document.querySelector('.form-errors');
 
         const sendForm = () => {
-            const formData = new FormData(formElement);
-
             spinnerElement.style.display = 'inline';
             errorsBlock.style.display = 'none';
             formElement.classList.add('muted');
