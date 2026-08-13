@@ -1,110 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Profile - Denis Ivanov</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link href="./assets/styles.css" rel="stylesheet" >
-    <link href="./assets/media.css" rel="stylesheet" >
-    <meta name="viewport" content="width=device-width">
-
-    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.1/widget.module.min.js" async defer></script>
-    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.1/widget.min.js" async defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Denis Ivanov — Tech Lead / Team Lead Fullstack. 16+ years: high-load systems, frontend architecture, teams from scratch.">
+  <title>Denis Ivanov — Tech Lead Fullstack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/media.css">
 </head>
 <body>
-    <div class="container">
-        <div class="container__photo photo">
-            <div class="photo__wrap"></div>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <div class="progress-top" aria-hidden="true">
+    <div class="progress-top__bar" id="progress-top"></div>
+  </div>
+
+  <aside class="chapter-rail" aria-hidden="true">
+    <span class="chapter-rail__label" id="chapter-rail-label">01 / 04</span>
+  </aside>
+
+  <header class="topbar">
+    <a class="topbar__mark" href="#hero">DI</a>
+    <nav class="lang" aria-label="Language" data-i18n-aria="nav.lang">
+      <button type="button" class="lang__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button type="button" class="lang__btn" data-lang="ru" aria-pressed="false">RU</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-name">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Tech Lead · Full-stack · Architecture</p>
+      <h1 class="hero__name" id="hero-name">Denis Ivanov</h1>
+      <p class="hero__lead" data-i18n="hero.lead">
+        16+ years in engineering — the last 4 years as Team/Tech Lead. I build high-load systems (Go/Node)
+        and frontend architecture that scales with the product and the team.
+      </p>
+      <a class="btn" href="#chapter-01"><span data-i18n="hero.cta">Read the story</span></a>
+    </section>
+
+    <section class="spine" id="spine" aria-labelledby="spine-title">
+      <h2 id="spine-title" data-i18n="spine.title">Curated Timeline</h2>
+      <p class="spine__lead" data-i18n="spine.lead">
+        Newest first. Four chapters — Sivrosa, IGA tech, Portside, Garage Media —
+        starting with what I do now, then the path that got me here.
+      </p>
+      <nav class="spine__years" aria-label="Case years" data-i18n-aria="spine.nav">
+        <a href="#chapter-01">2026</a>
+        <a href="#chapter-02">2023</a>
+        <a href="#chapter-03">2022</a>
+        <a href="#chapter-04">2014</a>
+      </nav>
+    </section>
+
+    <section class="chapters" id="chapters" aria-label="Case chapters" data-i18n-aria="chapters.label">
+      <article class="chapter" id="chapter-01" data-chapter="1" aria-labelledby="c1-title" data-year="2026">
+        <header class="chapter__meta">
+          <span class="chapter__year">2026</span>
+          <span class="chapter__index" aria-hidden="true">01</span>
+        </header>
+        <h2 class="chapter__title" id="c1-title" data-i18n="c1.title">AI call analysis &amp; streaming scoring</h2>
+        <p class="chapter__role" data-i18n="c1.role">Sivrosa · Tech Lead Fullstack</p>
+        <div class="chapter__story">
+          <p data-i18n="c1.context">
+            The business needed to quickly automate scoring of audio calls, find target leads, and extract insights — on a Go + Angular stack.
+          </p>
+          <p data-i18n="c1.action">
+            Under a tight deadline I picked up Angular and rebuilt the frontend on Feature-Sliced Design. Designed a Go backend for high-load streaming audio analysis through Yandex Cloud (YandexGPT / SpeechKit).
+          </p>
+          <p data-i18n="c1.result">
+            Shipped the AI solution to production — months of manual scoring and build work taken off the team, with automatic lead qualification wired into end-to-end business logic.
+          </p>
         </div>
-        <div class="container__content content">
-            <!--    s1 start    -->
-            <div class="content__section section" id="s1">
-                <div class="section__wrap">
-                    <h1>I’m Denis Ivanov,</h1>
-                    <p>I’m Full Stack developer with <b id="experience">13</b>+ experience.
-                        Usually I do admin panels, metrics dashboards, financial boards and other cool things with rich user interface.
-                        I like big and ambitious projects. I am also fond of sports and self-education.
-                    </p>
-                    <a class="hvr-sweep-to-right" href="#" id="btn-move">
-                        <span>Learn More</span>
-                    </a>
-                </div>
-            </div>
-            <!--    s1 end      -->
-            <!--    s2 start    -->
-            <div class="content__section section" id="s2">
-                <div class="section__wrap">
-                    <h2>Why I can help you.</h2>
-                    <p>I have been involved in the development of successful startups from scratch - so for your project,
-                        I will choose a safe development path. Without unnecessary movements, stress and with a reserve
-                        for the future.</p>
-                    <p>Sometimes I worked on projects that needed to be rescued.
-                        Sometimes I worked on projects where it was necessary to improve the team and lead it.</p>
-                    <p>And I can apply the same experience again.</p>
-                </div>
-            </div>
-            <!--    s2 end      -->
-            <!--    s3 start    -->
-            <div class="content__section section" id="s3">
-                <div class="section__wrap">
-                    <h2>What I can do for you.</h2>
-                    <ul class="service-list">
-                        <li class="service-list__item"><i class="fa-solid fa-code"></i>Front-End</li>
-                        <li class="service-list__item"><i class="fa-brands fa-js"></i>Back-End</li>
-                        <li class="service-list__item"><i class="fa-solid fa-database"></i>Data Base</li>
-                        <li class="service-list__item"><i class="fa-solid fa-person-snowboarding"></i>Team Lead</li>
-                    </ul>
-                </div>
-            </div>
-            <!--    s3 end      -->
-            <!--    s4 start    -->
-            <div class="content__section section" id="s4">
-                <div class="section__wrap">
-                    <h2>Contact Me.</h2>
-                    <ul class="contact-list">
-                        <li><i class="fa-solid fa-phone"></i>+38(071)419-71-65</li>
-                        <li><i class="fa-solid fa-envelope"></i>denquick@gmail.com</li>
-                    </ul>
-                    <div class="notify-success-sending">
-                        <h3><i class="fa-solid fa-circle-info"></i>Your email is success send.</h3>
-                        <p>I will read as soon as possible. Thanks!</p>
-                    </div>
-                    <form class="send-email" id="contact-form">
-                        <input type="email" name="email" placeholder="Your Email" class="form-control" required>
-                        <textarea name="message" placeholder="Your Message" class="form-control" required></textarea>
-                        <div class="frc-captcha" data-sitekey="FCMNML0CSIKKVES0" data-callback="captchaHandler" data-start="none"></div>
-                        <button id="btn-submit" class="hvr-sweep-to-right disabled" type="submit">Send Mail</button>
-                        <div class="lds-facebook">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="form-errors">
-                            <p>
-                                Error form. Something went wrong.
-                            </p>
-                        </div>
-                    </form>
-                </div>
-                    <div class="footer">
-                        <span class="footer__circle">
-                            <a title="Open my resume in PDF format" href="./assets/resume.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
-                        </span>
-                        <span class="footer__circle">
-                            <a title="See my github profile" href="https://github.com/DenQ" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        </span>
-                        <span class="footer__circle">
-                            <a title="See my linkedin profile" href="https://www.linkedin.com/in/denis-ivanov-104820112/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </span>
-                        <span class="footer__circle">
-                            <a title="See my twitter" href="https://twitter.com/den_quick" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        </span>
-                    </div>
-            </div>
-            <!--    s4 end      -->
+        <p class="chapter__tags">Go · Angular · FSD · Yandex Cloud · Streaming</p>
+      </article>
+
+      <article class="chapter chapter--invert" id="chapter-02" data-chapter="2" aria-labelledby="c2-title" data-year="2023">
+        <header class="chapter__meta">
+          <span class="chapter__year">2023</span>
+          <span class="chapter__index" aria-hidden="true">02</span>
+        </header>
+        <h2 class="chapter__title" id="c2-title" data-i18n="c2.title">A tender in seven days</h2>
+        <p class="chapter__role" data-i18n="c2.role">IGA tech · Team/Tech Lead</p>
+        <div class="chapter__story">
+          <p data-i18n="c2.context">
+            The business set a do-or-die goal: win the tender at any cost. Competitors had six months. We had seven days.
+          </p>
+          <p data-i18n="c2.action">
+            I got a full green light. Assembled a team of seven, sketched the architecture and app skeleton, ran the kickoff, and handed out the work.
+          </p>
+          <p data-i18n="c2.result">
+            In seven days — with a few late nights — we delivered. The tender was ours.
+          </p>
         </div>
-    </div>
-    <script type="application/javascript" src="index.js"></script>
+        <p class="chapter__tags">React · MUI · Zustand</p>
+      </article>
+
+      <article class="chapter" id="chapter-03" data-chapter="3" aria-labelledby="c3-title" data-year="2022">
+        <header class="chapter__meta">
+          <span class="chapter__year">2022</span>
+          <span class="chapter__index" aria-hidden="true">03</span>
+        </header>
+        <h2 class="chapter__title" id="c3-title" data-i18n="c3.title">A startup that took off</h2>
+        <p class="chapter__role" data-i18n="c3.role">Portside · First engineer / Fullstack</p>
+        <div class="chapter__story">
+          <p data-i18n="c3.context">
+            I laid the first brick at Portside — I was the first programmer. Empty repo. A US startup that had to take off.
+          </p>
+          <p data-i18n="c3.action">
+            From scratch I designed and built the core: billing, transactions, event calendars, analytics. Then COVID. Layoffs shook the company, we sat through blackouts — but the architecture held, and the code kept scaling under market pressure.
+          </p>
+          <p data-i18n="c3.result">
+            Two wild years — zero to IPO. We survived, took off, and made it to the exchange.
+          </p>
+        </div>
+        <p class="chapter__tags">React · Material UI · Node.js · Python · Fintech · Highload</p>
+      </article>
+
+      <article class="chapter chapter--invert" id="chapter-04" data-chapter="4" aria-labelledby="c4-title" data-year="2014">
+        <header class="chapter__meta">
+          <span class="chapter__year">2014</span>
+          <span class="chapter__index" aria-hidden="true">04</span>
+        </header>
+        <h2 class="chapter__title" id="c4-title" data-i18n="c4.title">A portal that filled itself</h2>
+        <p class="chapter__role" data-i18n="c4.role">Garage Media · Fullstack architect</p>
+        <div class="chapter__story">
+          <p data-i18n="c4.context">
+            The brief was an autonomous video portal from scratch. No architecture. No content. No video. Just a deadline and an empty screen.
+          </p>
+          <p data-i18n="c4.action">
+            First I sketched the skeleton and the architecture on PHP, Yii2, PostgreSQL. Then Kinopoisk and IMDb parsers — and a catalog appeared. Then bots that hit torrents, downloaded in parallel, and converted to MP4. In the end only SEO copy needed human edits — controllable, on purpose.
+          </p>
+          <p data-i18n="c4.result">
+            The service became self-sufficient: parse, fill, download, convert, stream. Content managers almost optional — only light edits where the machine still can’t.
+          </p>
+        </div>
+        <p class="chapter__tags">PHP · Yii2 · PostgreSQL · RabbitMQ</p>
+      </article>
+    </section>
+
+    <section class="craft" id="craft" aria-labelledby="craft-title">
+      <h2 id="craft-title" data-i18n="craft.title">My core stack</h2>
+      <div class="craft__grid">
+        <article class="craft__group">
+          <h3 data-i18n="craft.fe.title">Frontend</h3>
+          <p data-i18n="craft.fe.body">TypeScript, React, Angular, Redux, Zustand, MUI, Electron, D3, realtime UI.</p>
+        </article>
+        <article class="craft__group">
+          <h3 data-i18n="craft.be.title">Backend</h3>
+          <p data-i18n="craft.be.body">Go, Node.js, Next, Nest, Kafka, PostgreSQL, Redis, SSO/OAuth, Docker, CI/CD, OpenTelemetry.</p>
+        </article>
+        <article class="craft__group">
+          <h3 data-i18n="craft.arch.title">Architecture</h3>
+          <p data-i18n="craft.arch.body">High-load distributed systems, modular UI platforms, System Design, DDD, FSD.</p>
+        </article>
+        <article class="craft__group">
+          <h3 data-i18n="craft.lead.title">Leadership</h3>
+          <p data-i18n="craft.lead.body">Teams from scratch (14+ people), hiring, mentoring, Agile/Scrum, code review culture, delivery metrics.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n="contact.title">Let’s talk</h2>
+      <p class="contact__lead" data-i18n="contact.lead">
+        Open to Tech Lead / Team Lead Fullstack roles — remote, hybrid, or on-site. Prefer a short note.
+      </p>
+
+      <ul class="social">
+        <li>
+          <a href="https://github.com/DenQ" target="_blank" rel="noopener noreferrer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.866-.014-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.621.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.338c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="social__btn"
+            data-vault="tg"
+            aria-haspopup="dialog"
+            aria-controls="vault-dialog"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            <span>Telegram</span>
+          </button>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/denis-ivanov-104820112/" target="_blank" rel="noopener noreferrer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="social__btn"
+            data-vault="mail"
+            aria-haspopup="dialog"
+            aria-controls="vault-dialog"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>Email</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span data-i18n="foot.copy">Denis Ivanov · Moscow</span>
+  </footer>
+
+  <dialog class="mail-dialog" id="vault-dialog" aria-labelledby="vault-title">
+    <form method="dialog" class="mail-dialog__body">
+      <h2 id="vault-title">Email</h2>
+      <p class="mail-dialog__lead" id="vault-lead">The address is hidden and encrypted. Copy it to the clipboard.</p>
+
+      <label class="mail-trap">
+        Contact
+        <input id="vault-trap" type="text" name="contact" value="" tabindex="-1" autocomplete="off">
+      </label>
+
+      <div class="mail-dialog__row">
+        <p class="mail-dialog__mask" id="vault-mask">••••••••</p>
+        <button type="button" class="mail-dialog__copy" id="vault-copy" data-i18n="contact.copy">Copy</button>
+      </div>
+      <p class="mail-dialog__status" id="vault-status" role="status" aria-live="polite"></p>
+
+      <button type="submit" class="mail-dialog__close" data-i18n="contact.close">Close</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
